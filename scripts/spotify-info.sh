@@ -4,6 +4,9 @@
 artist=$(playerctl --player=spotify metadata artist 2>/dev/null)
 title=$(playerctl --player=spotify metadata title 2>/dev/null)
 
-song="$artist - $title"
+if [ -n "$artist" ] && [ -n "$title" ]; then
+    echo "$artist - $title"
+else
+    echo "Offline"
+fi
 
-echo "$song"
