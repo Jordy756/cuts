@@ -4,7 +4,7 @@
 status=$(playerctl --player=spotify status 2>/dev/null)
 
 if [ "$status" = "Playing" ]; then
-  echo ""  # Icono pause
+  echo ""
 else
-  echo ""  # Icono play
+  echo ""
 fi
